@@ -1,0 +1,24 @@
+﻿@model List<string>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Benvenuti nel mio sito...</h1>
+
+
+<table>
+
+
+@{
+    foreach( var elemento in @Model){
+    <tr><td>@elemento</td></tr>
+
+    }
+
+}
+
+</table>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+

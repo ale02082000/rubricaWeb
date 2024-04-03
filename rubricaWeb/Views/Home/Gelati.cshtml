@@ -1,0 +1,38 @@
+@model List<Gelato>
+@{
+    ViewData["Title"] = "Gelati";
+}
+
+<div class="text-center">
+    <h1 class="display-4"><b>Gelati</b></h1>
+    <h2>In questa pagina verranno visualizzati tutti i gelati disponibili</h2>
+   
+
+    <table class="table">
+        @{
+           
+            foreach( Gelato g in @Model )
+            {
+                if (g.Id == 2)
+                {
+                    <tr class="tabel-danger">
+                        <td>@g.Id</td>
+                        <td>@g.Nome</td>
+                        <td>@g.Descrizione</td>
+                        <td>@g.Immagine</td>
+                    </tr>
+                }
+                else
+                {
+                    <tr class="tabel">
+                        <td>@g.Id</td>
+                        <td>@g.Nome</td>
+                        <td>@g.Descrizione</td>
+                        <td>@g.Immagine</td>
+                    </tr>
+                }
+                
+            }
+        }
+    </table>
+</div>
